@@ -1,0 +1,218 @@
+@font-face {
+  font-family: "Reenie";
+  src: url("./fonts/ReenieBeanie-Regular.ttf") format("truetype"), url("./fonts/reeniebeanie-regular-webfont.woff2") format("woff2"), url("./fonts/reeniebeanie-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  font-size: calc(16px - (2000px - 100vw) / 400);
+}
+
+body {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-container {
+  background-color: hsl(349deg, 100%, 85%);
+  border: 0.25rem solid hsl(349deg, 80%, 55%);
+  border-radius: 1rem;
+  width: 60vw;
+  min-width: 25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  margin-top: 4rem;
+}
+
+.title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 5rem;
+  font-weight: 500;
+  font-family: Reenie, Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+.timer-app-container {
+  background-color: hsl(158deg, 100%, 35%);
+  border: 0.15rem solid hsl(158deg, 100%, 25%);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 20vw;
+  min-width: 15rem;
+  padding: 0;
+  margin: 0;
+}
+
+.rest {
+  background-color: black;
+}
+
+.countdown-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+
+.timer-label {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  margin: 0.5rem;
+}
+
+.countdown-timer {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 5rem;
+  font-weight: 500;
+  margin: 0;
+  padding: 0.5rem;
+  background-color: white;
+  border-radius: 0.5rem;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 50vw;
+  margin: 1rem;
+}
+
+.button {
+  width: 100%;
+  height: 4rem;
+  margin: 0.25rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  color: white;
+}
+
+.start_stop {
+  background-color: hsl(158deg, 100%, 35%);
+  border: 0.15rem solid hsl(158deg, 100%, 25%);
+  transition: all 300ms ease;
+}
+.start_stop:hover {
+  transform: translateY(-0.2rem);
+  background-color: hsl(158deg, 100%, 25%);
+}
+.start_stop:active {
+  transform: translateY(0.1rem);
+  background-color: white;
+}
+
+.reset {
+  background-color: hsl(349deg, 80%, 55%);
+  border: 0.15rem solid hsl(349deg, 100%, 30%);
+  transition: all 300ms ease;
+}
+.reset:hover {
+  transform: translateY(-0.2rem);
+  background-color: hsl(349deg, 100%, 30%);
+}
+.reset:active {
+  transform: translateY(0.1rem);
+  background-color: white;
+}
+
+.interval-controls-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 25vw;
+  min-width: 15rem;
+}
+
+.time-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.session-label {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+  font-family: Reenie, Arial, Helvetica, sans-serif;
+  margin: 0 0 0.5rem 0;
+}
+
+.session-controls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: 8rem;
+  height: 4rem;
+  padding: 0;
+  background-color: white;
+  border-radius: 0.5rem;
+}
+
+.session-value-display {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.increment-decrement-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+
+.session-increment {
+  background-color: hsl(349deg, 100%, 30%);
+  height: 1.5rem;
+  width: 1.5rem;
+  -webkit-clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+          clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+  margin: 0.25rem;
+  transition: all 250ms ease;
+}
+.session-increment:hover {
+  background-color: hsl(349deg, 80%, 55%);
+}
+
+.session-decrement {
+  background-color: hsl(158deg, 100%, 25%);
+  height: 1.5rem;
+  width: 1.5rem;
+  -webkit-clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
+          clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
+  margin: 0.25rem;
+  transition: all 250ms ease;
+}
+.session-decrement:hover {
+  background-color: hsl(158deg, 100%, 35%);
+}
+
+@media screen and (max-width: 1000px) {
+  .buttons-container {
+    flex-direction: column;
+  }
+
+  .interval-controls-container {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=styles.css.map */
