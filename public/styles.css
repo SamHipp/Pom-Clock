@@ -81,6 +81,7 @@ body {
   padding: 0.5rem;
   background-color: white;
   border-radius: 0.5rem;
+  box-shadow: inset 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.4);
 }
 
 .buttons-container {
@@ -107,28 +108,34 @@ body {
   background-color: hsl(158deg, 100%, 35%);
   border: 0.15rem solid hsl(158deg, 100%, 25%);
   transition: all 300ms ease;
+  box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.4);
 }
 .start_stop:hover {
   transform: translateY(-0.2rem);
   background-color: hsl(158deg, 100%, 25%);
+  box-shadow: 0.3rem 0.3rem 0.3rem rgba(0, 0, 0, 0.3);
 }
 .start_stop:active {
   transform: translateY(0.1rem);
   background-color: white;
+  box-shadow: none;
 }
 
 .reset {
   background-color: hsl(349deg, 80%, 55%);
   border: 0.15rem solid hsl(349deg, 100%, 30%);
   transition: all 300ms ease;
+  box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.4);
 }
 .reset:hover {
   transform: translateY(-0.2rem);
   background-color: hsl(349deg, 100%, 30%);
+  box-shadow: 0.3rem 0.3rem 0.3rem rgba(0, 0, 0, 0.3);
 }
 .reset:active {
   transform: translateY(0.1rem);
   background-color: white;
+  box-shadow: none;
 }
 
 .interval-controls-container {
@@ -165,6 +172,7 @@ body {
   padding: 0;
   background-color: white;
   border-radius: 0.5rem;
+  box-shadow: inset 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.4);
 }
 
 .session-value-display {

@@ -56,43 +56,37 @@ useEffect(() => {
         nextSession();
     }
 },[secsRemaining])
+
+useEffect(() => {
+    if (goSession === 'Go') {
+        setSecsRemaining(goTime * 60);
+    } else {setSecsRemaining(restTime * 60);}
+}, [goTime, restTime])
     
 
     const timerPause = clearInterval(setInterval);
 
     const sessionIncrement = () => {
         if (goTime < 60) {
-        setGoTime(goTime + 1);
-            if (goSession === 'Go') {
-                setSecsRemaining(goTime * 60);
-            }
+        setGoTime(goTime => goTime + 1);
         }
     }
 
     const sessionDecrement = () => {
         if (goTime > 1) {
-        setGoTime(goTime - 1);
-        if (goSession === 'Go') {
-            setSecsRemaining(goTime * 60);
-        }
+        setGoTime(goTime => goTime - 1);
         }
     }
 
     const breakIncrement = () => {
         if (restTime < 60) {
-        setRestTime(restTime + 1);
-        if (goSession === 'Rest') {
-            setSecsRemaining(restTime * 60);
-        }
+        setRestTime(restTime => restTime + 1);
         }
     }
 
     const breakDecrement = () => {
         if (restTime > 1) {
-        setRestTime(restTime - 1);
-        if (goSession === 'Rest') {
-            setSecsRemaining(restTime * 60);
-        }
+        setRestTime(restTime => restTime - 1);
         }
     }
 

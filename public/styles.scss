@@ -68,7 +68,7 @@ body {
     padding: .5rem;
     background-color: white;
     border-radius: .5rem;
-
+    box-shadow: inset .2rem .2rem .2rem rgba($color: #000000, $alpha: 0.4);
 }
 
 .buttons-container {
@@ -90,13 +90,16 @@ body {
     background-color: v.$light-green;
     border: .15rem solid v.$dark-green;
     transition: all 300ms ease;
+    box-shadow: .2rem .2rem .2rem rgba($color: #000000, $alpha: 0.4);
     &:hover {
         transform: translateY(-.2rem);
         background-color: v.$dark-green;
+        box-shadow: .3rem .3rem .3rem rgba($color: #000000, $alpha: 0.3);
     }
     &:active {
         transform: translateY(.1rem);
         background-color: white;
+        box-shadow: none;
     }
 }
 
@@ -104,13 +107,16 @@ body {
     background-color: v.$dark-red;
     border: .15rem solid v.$darker-red;
     transition: all 300ms ease;
+    box-shadow: .2rem .2rem .2rem rgba($color: #000000, $alpha: 0.4);
     &:hover {
         transform: translateY(-.2rem);
         background-color: v.$darker-red;
+        box-shadow: .3rem .3rem .3rem rgba($color: #000000, $alpha: 0.3);
     }
     &:active {
         transform: translateY(.1rem);
         background-color: white;
+        box-shadow: none;
     }
 }
 
@@ -137,6 +143,7 @@ body {
     padding: 0;
     background-color: white;
     border-radius: .5rem;
+    box-shadow: inset .2rem .2rem .2rem rgba($color: #000000, $alpha: 0.4);
 }
 
 .session-value-display {
