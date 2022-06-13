@@ -34,6 +34,7 @@ function App() {
     const [timerGoing, setTimerGoing] = useState(false);
     const [startTime, setStartTime] = useState(Date.now());
     const [updatedTime, setUpdatedTime] = useState(Date.now());
+    const [audioSound, setAudioSound] = useState(soundBank[0]['url']);
     // const [timerCounter, setTimerCounter] = useState(1);
 
     
@@ -52,7 +53,9 @@ useEffect(() => {
 useEffect(() => {
     if(secsRemaining === 0) {
         // play audio
-        document.getElementById('beep').play();
+        let audio = document.getElementById('beep');
+        audio.currentTime = 0;
+        audio.play();
         nextSession();
     }
 },[secsRemaining])
@@ -117,6 +120,10 @@ useEffect(() => {
         }
     }
 
+    const handleAudioChange = () => {
+        let audioSelect = document.getElementById('audio-select');
+        setAudioSound(item => audioSelect.value);
+    }
 
 return (
 <div className="app-container">
@@ -148,11 +155,19 @@ return (
                 <div className="session-increment" id="break-increment" onClick={breakIncrement}></div>
                 <div className="session-decrement" id="break-decrement" onClick={breakDecrement}></div>
                 </div>
-
             </div>
         </div>
+        <div className="audio-select-container">
+            <p className="session-label" id="audio-label">Choose Sound:</p>
+            <select id="audio-select" className="audio-select" onChange={handleAudioChange}>
+                {soundBank.map((item) => {
+                    return <option value={item.url} key={item.id}>{item.name}</option>
+                })}
+            </select>
+            
+        </div>
     </div>
-    <audio id="beep" src="./sounds/303.wav"/>
+    <audio id="beep" src={audioSound}/>
 </div>
 );
 }
