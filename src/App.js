@@ -157,9 +157,9 @@ return (
                 </div>
             </div>
         </div>
-        <div className="audio-select-container">
+        <div className="time-container audio-select-container">
             <p className="session-label" id="audio-label">Choose Sound:</p>
-            <select id="audio-select" className="audio-select" onChange={handleAudioChange}>
+            <select id="audio-select" className="session-controls audio-select" onChange={handleAudioChange}>
                 {soundBank.map((item) => {
                     return <option value={item.url} key={item.id}>{item.name}</option>
                 })}

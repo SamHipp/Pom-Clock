@@ -123,7 +123,7 @@ body {
 .interval-controls-container {
     @include flex(row, center, space-between);
     width: 25vw;
-    min-width: 15rem;
+    min-width: 35rem;
 }
 
 .time-container {
@@ -177,6 +177,11 @@ body {
     &:hover {
         background-color: v.$light-green;
     }
+}
+
+.audio-select {
+    @include text-styles(1.5rem, 500);
+    min-width: 12rem;
 }
 
 @media screen and (max-width: 1000px) {
